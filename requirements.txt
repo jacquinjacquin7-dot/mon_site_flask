@@ -1,4 +1,4 @@
 Flask==3.0.3
 Flask_SQLAlchemy==3.0.1
 gunicorn==23.0.0
-psycop2-binary==2.9.9
+psycopg==3.2.12
