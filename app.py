@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 # Configuration de la base de données SQLite
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///visiteurs.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://visiteurs_db_user:MltHcCjE0IZTxM0eLvIwH9da5sUkTqWU@dpg-d41ot8ruibrs73df01p0-a.frankfurt-postgres.render.com/visiteurs_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)

@@ -1,3 +1,4 @@
 Flask==3.0.3
 Flask_SQLAlchemy
 gunicorn
+psycop2-binary
