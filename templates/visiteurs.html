@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des visiteurs</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body>
+    <h1>Liste des visiteurs enregistrés</h1>
+    <ul>
+        {% for v in visiteurs %}
+            <li>
+                {{ v.nom }} — {{ v.email }}
+                | <a href="{{ url_for('modifier', id=v.id) }}">Modifier</a>
+                | <a href="{{ url_for('supprimer', id=v.id) }}" onclick="return confirm('Supprimer ce visiteur ?')">Supprimer</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="{{ url_for('index') }}">Retour au formulaire</a>
+</body>
+</html>

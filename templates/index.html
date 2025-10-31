@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body>
+    <h1>soyez  la bienvenue sur ce site en tant que visiteur</h1>
+    <h1>Ajouter un visiteur</h1>
+    <form action="{{ url_for('ajouter') }}" method="POST">
+        Nom : <input type="text" name="nom" required><br>
+        Email : <input type="email" name="email" required><br>
+        <input type="submit" value="Enregistrer">
+    </form>
+
+    <br>
+    <a href="{{ url_for('liste_visiteurs') }}">Voir la liste des visiteurs</a>
+</body>
+</html>
