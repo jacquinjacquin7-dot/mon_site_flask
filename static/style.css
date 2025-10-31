@@ -1,100 +1,92 @@
-/* 🎨 STYLE GLOBAL */
+/* ======== STYLE GLOBAL ======== */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f3f6fa;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
     color: #333;
     margin: 0;
     padding: 0;
-    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* 🔹 TITRES */
+/* ======== CONTENEUR PRINCIPAL ======== */
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+/* ======== TITRES ======== */
 h1 {
     color: #2a6592;
-    margin-top: 30px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-/* 🧱 FORMULAIRE */
+h2 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* ======== FORMULAIRE ======== */
 form {
-    background: white;
-    width: 300px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-input[type="text"],
-input[type="email"] {
-    width: 90%;
+input[type="text"], input[type="email"] {
     padding: 10px;
-    margin: 8px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
 
-/* 🟦 BOUTONS */
-input[type="submit"],
-a.button {
-    background-color: #2a6592;
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #2a6592;
+    box-shadow: 0 0 5px rgba(42, 101, 146, 0.4);
+}
+
+/* ======== BOUTON ======== */
+button, input[type="submit"] {
+    background: #2a6592;
     color: white;
-    padding: 10px 15px;
     border: none;
     border-radius: 8px;
-    font-size: 14px;
+    padding: 12px;
+    font-size: 16px;
     cursor: pointer;
-    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #1e4a6b;
+    transform: scale(1.05);
+}
+
+/* ======== LIEN ======== */
+a {
     display: inline-block;
-    transition: 0.3s;
-}
-
-input[type="submit"]:hover,
-a.button:hover {
-    background-color: #1f4d73;
-}
-
-/* 📋 LISTE DES VISITEURS */
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px auto;
-    width: 320px;
-}
-
-li {
-    background: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-li a {
-    color: #2a6592;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-li a:hover {
-    text-decoration: underline;
-}
-
-/* 🔙 LIEN DE RETOUR */
-a.button-retour {
-    display: block;
     margin-top: 20px;
     color: #2a6592;
     text-decoration: none;
+    transition: 0.3s;
 }
 
-a.button-retour:hover {
+a:hover {
     text-decoration: underline;
 }
 
-/* 📱 ADAPTATION MOBILE */
-@media screen and (max-width: 480px) {
-    form, ul {
-        width: 90%;
-    }
+/* ======== ANIMATION ======== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
